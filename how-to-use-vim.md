@@ -24,7 +24,6 @@ e.g. `$ vim hello.c`
 **Command mode** <br>
 - 디폴트
 - 밑에 INSERT가 안 적혀있음. 이 때 저장 or 종료 가능
-![C code of Vim](./vim-images/vim1.png)
 
 <br>
 
@@ -38,6 +37,8 @@ e.g. `$ vim hello.c`
 - command mode일 때 i 누르면 `-- INSERT --` 가 뜨는데, 이러면 Input mode 이다
 - 이때 코드를 자유롭게 작성할 수 있다
 - `ESC` 누르면 command로 돌아감
+
+![not C code of Vim](./vim-images/vim-input-mode.png)
 
 <br>
 
