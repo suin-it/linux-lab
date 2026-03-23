@@ -28,8 +28,9 @@ e.g. `$ vim hello.c`
 <br>
 
 - 종료(저장X) 명령: `:q(!)`
-- 저장 명령: `:wq(!)`
-- `!` 붙으면 강제
+- 저장 명령: `:w(!)`
+- 저장+종료 명령: `:wq(!)`
+- `!` 붙으면 **강제**
 
 <br>
 
@@ -47,7 +48,7 @@ e.g. `$ vim hello.c`
 <br><br><br>
 
 ## 3. Move Cursor
-- `w` : 다음 단어 시작 부분으로 점프
+- `w` : 다음 단어 시작 부분(첫 글자)으로 점프
 - `b` : 이전 단어 시작 부분으로 점프
 - `$` : 그 줄의 **맨 끝**으로 이동
 - `0` : 그 줄의 **맨 앞**으로 이동
@@ -120,6 +121,9 @@ yy 쓰고 나서 p 아니면 P 쓰니까 되는 듯
 (h left, j down, k up, l right)
 
 ![press v](./vim-images/vim4-selection.png)
+
+<br>
+
 ![block selection](/vim-images/vim5-selection-block.png)
 
 <br><br><br>
