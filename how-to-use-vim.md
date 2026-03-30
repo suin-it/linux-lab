@@ -2,7 +2,7 @@
 <br><br>
 
 1. How to create file(vim)?
-2. What is Command mode and Input mode?
+2. What is Normal mode and Input mode?
 3. Move Cursor
 4. Move Screen
 5. UNDO & REDO
@@ -20,8 +20,8 @@ e.g. `$ vim hello.c`
 
 <br><br><br>
 
-## 2. What is Command mode and Input mode
-**Command mode** <br>
+## 2. What is Normal(Command) mode and Input mode
+**Normal mode** <br>
 - 디폴트
 - 밑에 INSERT가 안 적혀있음. 이 때 저장 or 종료 가능
 
@@ -35,15 +35,15 @@ e.g. `$ vim hello.c`
 <br>
 
 **Input mode**
-- command mode일 때 i 누르면 `-- INSERT --` 가 뜨는데, 이러면 Input mode 이다
+- normal mode일 때 i 누르면 `-- INSERT --` 가 뜨는데, 이러면 Input mode 이다
 - 이때 코드를 자유롭게 작성할 수 있다
-- `ESC` 누르면 command로 돌아감
+- `ESC` 누르면 일반 모드로 돌아감
 
 ![not C code of Vim](./vim-images/vim-input-mode.png)
 
 <br>
 
-이 글에 나오는 명령어는 기본 command mode라고 보면 된다.. (~~내가 헷갈렸다~~)
+이 글에 나오는 명령어는 기본normal mode라고 보면 된다.. (~~내가 헷갈렸다~~)
 
 <br><br><br>
 
@@ -55,13 +55,13 @@ e.g. `$ vim hello.c`
 
 <br>
 
-command mode에서 '0'을 누르면 그 줄의 맨 앞으로 이동한다
+Normal mode에서 '0'을 누르면 그 줄의 맨 앞으로 이동한다
 ![press 0](./vim-images/vim2-movecursor.png)
 
 <br><br><br>
 
 ## 4. Move Screen
-- In command mode
+- In Normal mode
     - `^F` -> 내리기(down)
     - `^B` -> 올리기(up)
     - `^D` -> 반만 내리기
@@ -80,7 +80,7 @@ command mode에서 '0'을 누르면 그 줄의 맨 앞으로 이동한다
 `ESC`를 눌러 하단의 `-- INSERT --` 가 사라진 상태에서 진행
 
 - `x` : 커서가 위치한 글자 **딱 한 개** 삭제
-- `r` + [바꿀 글자]: 현재 글자를 다른 글자로 교체(Replace, Command mode)
+- `r` + [바꿀 글자]: 현재 글자를 다른 글자로 교체(Replace, Normal mode)
     - e.g. t를 p로 바꾸고 싶으면 커서가 있는 자리에서 `rp`
 - `D`: 커서 있는 위치부터 문장의 끝까지 삭제
 - `dd` : 커서가 있는 **한 줄 전체 삭제**
@@ -132,3 +132,4 @@ yy 쓰고 나서 p 아니면 P 쓰니까 되는 듯
 - `%` (괄호 짝 찾기) : 괄호 위에 커서를 두고 `%`를 누르면 짝이 맞는 반대편 괄호로 커서가 순간 이동. 괄호가 안 닫혔다면 커서가 움직이지 않는다.
 - `==` (자동 들여쓰기 정렬) : 오타 수정하다가 들여쓰기 엉망 됐을 때 해당 줄에서 `==` 를 누르기 (~~그런데 이건 좀 읭?스러움 써보면 앎~~)
     - 코드 전체 정렬: `gg`(맨 위로 이동) -> `v`(비주얼 모드) -> `G`(맨 아래까지 선택) -> `=`(정렬)
+- `숫자` + `G` -> ** 그 번호로 이동한다! **
